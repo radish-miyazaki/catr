@@ -36,16 +36,12 @@ pub fn run(args: Args) -> MyResult<()> {
                 let lines = lines?;
                 let mut line_count = 1;
 
-                for (i, line) in lines.iter().enumerate() {
+                for line in lines.iter() {
                     if args.number_lines || (args.number_nonblank_lines && !line.is_empty()) {
-                        print!("{:6}\t{}", line_count, line);
+                        println!("{:>6}\t{}", line_count, line);
                         line_count += 1;
                     } else {
-                        print!("{}", line);
-                    }
-
-                    if i != lines.len() - 1 {
-                        print!("\n")
+                        println!("{}", line);
                     }
                 }
             },
