@@ -38,7 +38,7 @@ pub fn run(args: Args) -> MyResult<()> {
 
                 for line in lines.iter() {
                     if args.number_lines || (args.number_nonblank_lines && !line.is_empty()) {
-                        println!("{:6}\t{}", line_count, line);
+                        println!("{:>6}\t{}", line_count, line);
                         line_count += 1;
                     } else {
                         println!("{}", line);
