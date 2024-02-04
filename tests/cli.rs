@@ -146,12 +146,12 @@ fn all() -> TestResult {
 
 #[test]
 fn all_n() -> TestResult {
-    run(&[FOX, SPIDERS, BUSTLE], "tests/expected/all.n.out")
+    run(&["-n", FOX, SPIDERS, BUSTLE], "tests/expected/all.n.out")
 }
 
 #[test]
 fn all_b() -> TestResult {
-    run(&[FOX, SPIDERS, BUSTLE], "tests/expected/all.b.out")
+    run(&["-b", FOX, SPIDERS, BUSTLE], "tests/expected/all.b.out")
 }
 
 #[test]
